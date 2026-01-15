@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head> 
+        <meta charset="utf-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+        <meta 
+        name="description"
+        content="Tips and Tricks on handle ghosts and Report Unexplainable Sightings Here!" />
+        <title>PeculiarSightings</title>
+        <link rel="stylesheet" href="style.CSS">
+
+    </head>
+
+<!--Using h1,h2,h3 etc headers in order is important, skipping over one could cause problems with
+assistive technologies such as screen readers - making them think they've skipped a part-->
+
+<body>
+        <script src="dynamic.js"></script>
+        <header>
+        <nav class="navmenu">
+        <h1>Peculiar Sightings</h1>
+        <ul>
+        <li><a href="#section1">Report A Sighting</a></li>
+        <li><a href="#section2">Ghost Identification</a></li>
+        <li><a href="#section3">Creature Identification</a></li>
+        </ul>
+        </nav>
+        </header>
+        <hr>
+    
+
+<!--Form! - *need to add value for action-->
+        <main>
+        <section id="section1">    
+        <h2>Want to report a Peculiar Sighting?</h2>
+        <p>Have you lost a pet unicorn, noticed something <em>strange</em> and unexplainable or are simply being haunted by ghosts? Then you've come to the right place! Here you will find information on various ghost types, mystical incident report forms and more!</p>
+
+        <form action="" class="reportform" id="reportForm">
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName"/>
+
+            <label  for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName"/>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com"/>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" 
+                   id="phoneNumber"
+                   name="phoneNumber"
+                   minlength="11"
+                   maxlength="11" />
+            
+            <label for="dateAndTime">Date and Time of Incident:</label>
+            <input type="datetime-local" id="dateAndTime" name="dateAndTime">
+
+            <label for="location">Location of Incident:</label>
+            <input type="text" id="location" name="location">
+
+<!--'specify incident' dropdown below is what is used to decide which of following dropdowns show -->
+
+            <label for="specifyIncident">Specify Type of Incident: </label>
+            <select name="specifyIncident" id="specifyIncident" class="dropdown">
+                <option value="" selected disabled hidden>Select an Option</option>
+                <option value="ghostSighting">Ghost Sighting</option>
+                <option value="creatureSighting">Missing Magical Animal</option>
+            </select>
+
+            <div class="hidden" id="ghostDiv">
+            <label for="typeOfGhost">Choose Ghost Type:</label>
+            <select name="typeOfGhost" id="typeOfGhost" class="dropdown">
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value="poltergeist">Poltergeist</option>
+                <option value="banshee">Banshee</option>
+                <option value="spirit">Spirit</option>
+            </select>
+            </div>
+
+            <div class="hidden" id="creatureDiv">
+            <label for="typeOfCreature">Choose Magical Animal Biological Class:</label>
+            <select name="typeOfCreature" id="typeOfCreature" class="dropdown">
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value="Equine">Equidae</option>
+                <option value="Fairy">Fairy</option>
+                <option value="Feline">Feline</option>
+                <option value="Aquatic">Aquatic</option>
+            </select>
+            </div>
+
+            <label for="IncidentReport">Please Describe The Incident:</label>
+            <textarea type="textarea"
+                   id="IncidentReport"
+                   name="incidentReport" 
+                   minlength="5"
+                   maxlength="300"
+                   placeholder="Sprites have stolen and hidden all of my USB-C Cables..." ></textarea>
+
+        <div class="infoconsent">
+            <label for="InfoConsent">By leaving this box ticked you consent to data collected within this form to be processed and held by The MythicalMagicalBureau. </label>
+            <input type="checkbox"
+                   id="InfoConsent" checked/>
+        </div>
+
+            <button type="submit" id="submitForm">Submit Form</button>
+        </form>
+        </section>
+<hr>
+
+<!--Ghost Types-->
+        <section id="section2" class="infoGrid">
+        <h3>Need Help Identifying your Ghost?</h3>
+        <div id="poltergeist">
+        <dl>
+            <dt class="dltitle">Poltergeist:</dt>
+            <dd><i lang="de">Poltern</i> meaning 'to make noise' and <i lang="de">Geist</i> meaning 'ghost' in German, Poltergeists are active ghosts who love to throw things, cause loud noises and flicker lights. Preferring to reside in ordinary homes, specifically high energy rooms such as the kitchen or bathroom. If your ghost is more active than most, it's likely you have a Poltergeist amidst your home.</dd>
+        </dl>
+            <img src="images/poltergeistpolaroid.jpg" class="polaroid"
+                 alt="Non-threatening polaroid photo of a poltergeist making kitchenware float in kitchen." 
+                 width="300px" 
+                 height="400px">
+        </div>
+        <div id="banshee">
+        <dl>
+            <dt class="dltitle">Banshee:</dt>
+            <dd>Banshees are a female spirit from Irish folklore (where they're more commonly known as <i lang="ga">bean s&lacute;dhe</i>). They're easily identifiable from their wailing cry. They often appear as an older woman with long hair. <strong>Witnessing this ghost type can be seen as a bad omen and it's important that you log a report on this ghost type as soon as possible!</strong> </dd>
+        </dl>
+            <img src="images/bansheepolaroid.jpg" class="polaroid"
+                 alt="Polaroid of a Banshee frowning and staring straight ahead while floating infront of a lake that is surrounded by mountains."
+                 width="300px"
+                 height="400px">
+        </div>
+        <div id="spirit">
+        <dl> 
+            <dt class="dltitle">Spirit:</dt>
+            <dd>Non-corporeal ghosts that are born from unfinished business. This ghost type can be both human and animal! Generally harmless for the most part but reports can help us with our research so are still encouraged! </dd>
+        </dl>
+            <img src="images/spiritpolaroid.jpg" class="polaroid"
+                 alt="Polaroid of a Spirit haunting an office with a thought bubble above it's head picturing some car keys with a question mark next to the thought bubble."
+                 width="300px"
+                 height="400px">
+        </div>
+
+
+        </section>
+<hr>
+        
+<!--Magical Creature Types-->
+
+        <section id="section3" class="infoGrid">
+            <h3>Need Help Identifying a Magical Creature?</h3>
+            
+            <div id="equine">
+            <dl>
+                <dt class="dltitle">Equine</dt>
+                <dd>The equine category encompasses anything resembling a Unicorn, Pegasus, Centaur and Kelpie. Any creature that falls within the Equidae family can be characterised by features such as single-hooves, a herbivorous diet &#40;with the exception of Selkies&#41;, long heads and manes!</dd>
+            </dl>  
+                <img src="images/equinepolaroid.jpg" class="polaroid"
+                     alt="A polaroid picture of a winged horse standing infront of a waterfall."
+                     width="300px"
+                     height="400px">
+            </div>
+            <div id="fairy">
+            <dl>
+                <dt class="dltitle">Fairy</dt>
+                <dd>Fairy Magical Creatures can be defined by their small, humanoid build. Creatures that fall under this category would be Pixies, Goblins and Sprites!</dd>
+            </dl>
+                <img src="images/fairypolaroid.jpg" class="polaroid"
+                     alt="A polaroid picture of a group of fairies where the background is dark and a very faint tree fairy house is in the background"
+                     width="300px"
+                     height="400px">
+            </div>
+            <div id="feline">
+            <dl>
+                <dt class="dltitle">Feline</dt>
+                <dd>Similar to their non-magical brethren, Magical Felines inherit many of the same biological traits as their non-magical counterparts. Examples that fall within this group are Tressyms, Griffins, Chimeras, Displacer Beasts and Cat Lords.</dd>
+            </dl>
+                <img src="images/griffinpolaroid.jpg" class="polaroid"
+                     alt="A polaroid picture of a Griffin in front of a canyon."
+                     width="300px"
+                     height="400px"> 
+            </div>
+            
+
+        </section>
+        </main>
+    </body>
+</html>
